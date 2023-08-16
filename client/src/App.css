@@ -2,6 +2,10 @@
     cursor: pointer;
 }
 
+.App {
+  text-align: center;
+}
+
 .block {
     display: flex;
     align-items: center;
@@ -13,10 +17,6 @@
     align-items: center;
     justify-content: center;
     height: 25vh;
-}
-
-.App {
-  text-align: center;
 }
 
 .App-logo {
@@ -39,10 +39,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
