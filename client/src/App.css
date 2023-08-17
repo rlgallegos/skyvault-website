@@ -18,6 +18,9 @@
     justify-content: center;
     height: 25vh;
 }
+ul {
+    list-style-type: none;
+  }
 
 .App-logo {
   height: 40vmin;
@@ -29,6 +32,39 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+/* Fonts */
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('./fonts/playfair-display.ttf') format('truetype');
+  }
+  .playfair {
+    font-family: 'PlayfairDisplay';
+  }
+@font-face {
+    font-family: 'PlayfairDisplaySC';
+    src: url('./fonts/playfair-display-sc.ttf') format('truetype');
+  }
+  .playfair-sc {
+    font-family: 'PlayfairDisplaySC';
+  }
+@font-face {
+    font-family: 'Lora';
+    src: url('./fonts/lora.ttf') format('truetype');
+  }
+  .lora {
+    font-family: 'Lora';
+  }
+@font-face {
+    font-family: 'SourceSans3';
+    src: url('./fonts/source-sans-3.ttf') format('truetype');
+  }
+  .source-sans {
+    font-family: 'SourceSans3';
+  }
+
+
+
 
 @keyframes App-logo-spin {
   from {
