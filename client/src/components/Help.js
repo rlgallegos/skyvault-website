@@ -1,33 +1,100 @@
+import { useState } from "react"
 
 
 function Help(){
+    const [block, setBlock] = useState(null)
+    
+    function handleClick(e){
+        if (e.target.id === 'tutorial-refund'){
+            setBlock(refundBlock)
+        } else if (e.target.id === 'tutorial-import') {
+            setBlock(importBlock)
+        } else {
+            setBlock(saleUpdateBlock)
+        }
+    }
+
+    function handleDownload() {
+        const templateLocation = '/import-template.xlsx'
+        window.open(templateLocation, '_blank')
+    }
+
+    // Tutorial Blocks set by state
+
+    const refundBlock = (
+    <div className="w-full h-full px-4 flex">
+        <div className='h-full w-1/2'>
+            <video muted loop autoPlay className="max-h-full mx-auto" src="/tutorial-refund.mp4"></video>
+        </div>
+        <div className="w-1/2 h-full flex flex-col items-left justify-center text-white">
+            <h3 className="text-3xl text-left mb-6">Steps:</h3>
+            <ol className="text-xl text-justify">
+                <li>1. In the "Settings" page, tap on the sale you'd like to process a refund for.</li>
+                <li>2. In the upper-right corner, tap the return button.</li>
+                <li>3. Select the quantity of items from the sale to return.</li>
+                <li>4. Submit refund.</li>
+            </ol>
+        </div>
+    </div>
+    )
+    const saleUpdateBlock = (
+    <div className="w-full h-full px-4 flex">
+        <div className='h-full w-1/2'>
+            <video muted loop autoPlay className="max-h-full mx-auto" src="/tutorial-sale-update.mp4"></video>
+        </div>
+        <div className="w-1/2 h-full flex flex-col items-left justify-center text-white">
+            <h3 className="text-3xl text-left mb-6">Steps:</h3>
+            <ol className="text-xl text-justify">
+                <li>1. In the "Settings" page, tap on the sale you'd like to edit.</li>
+                <li>2. Edit the sale however you would like.</li>
+                <li>3. Tap the update button.</li>
+            </ol>
+        </div>
+    </div>
+    )
+    const importBlock = (
+    <div className="w-full h-full px-4 flex">
+        <div className='h-full w-1/2'>
+            <video muted loop autoPlay className="max-h-full mx-auto" src="/tutorial-import.mp4"></video>
+        </div>
+        <div className="w-1/2 h-full flex flex-col items-left justify-center text-white">
+            <h3 className="text-3xl text-left mb-6">Steps:</h3>
+            <ol className="text-xl text-justify">
+                <li>1. Download your excel file template (below) and type / copy-paste your inventory there.</li>
+                <li className="pl-5">(If building your own excel file, be sure it follows the exact format pictured in the app.)</li>
+                <li>2. In the "Settings" page, tap "Import."</li>
+                <li>3. "Tap Import Excel File."</li>
+                <li>4. Select the correct excel file (if on an iPhone, this should be in your Files app).</li>
+                <button onClick={handleDownload} className="lora border border-white rounded-xl py-2 px-4 mt-2
+                hover:bg-white hover:text-black hover:transform hover:scale-105 transition-all duration-200">Download Excel Template</button>
+            </ol>
+        </div>
+    </div>
+    )
+
+
+
     return (
-        <div id="help" className="block bg-black pt-[10vh] ">
-            <div className="flex flex-col w-full h-full">
-                <div className="h-1/4 w-full flex items-center px-8 justify-center">
-                    <h2 className="lora text-white text-4xl text-center">Upload Your Inventory In Seconds</h2>
+        <div id="help" className="block bg-black">
+            <div className="flex flex-col w-full h-3/4">
+                {/* Top 1/4 */}
+                <div className="mx-auto h-1/6 w-1/2 flex items-center justify-center">
+                    <button id="tutorial-refund" onClick={handleClick} 
+                        className="lora text-white w-1/3 h-2/3 rounded-l-full border border-white hover:bg-white hover:text-black
+                        hover:transform hover:scale-105 transition-all duration-200">
+                            Processing Refunds</button>
+                    <button id="tutorial-import" onClick={handleClick} 
+                        className="lora text-white w-1/3 h-2/3 border border-white hover:bg-white hover:text-black
+                        hover:transform hover:scale-105 transition-all duration-200">
+                            Importing Your Inventory</button>
+                    <button id="tutorial-edit-sales" onClick={handleClick} 
+                        className="lora text-white w-1/3 h-2/3 rounded-r-full border border-white hover:bg-white hover:text-black
+                        hover:transform hover:scale-105 transition-all duration-200">
+                            Editing Sales</button>
                 </div>
-                <div className="h-3/4 w-full flex justify-between items-center">
-                    <div className="h-full w-1/4 border border-white">
-                        <img className="h-full mx-auto" src="/phone-settings-import-black-bg.png" alt="upload page" />
-                    </div>
-                    <div className="h-full w-1/4 border border-white flex flex-col items-center justify-center">
-                        <p className="text-3xl text-white">Easy as 1-2-3!</p>
-                        <ol className="py-4">
-                            <li className="text-white text-xl my-4">
-                                Open Settings
-                            </li>
-                            <li className="text-white text-xl my-4">
-                                Do Stuff
-                            </li>
-                            <li className="text-white text-xl my-4">
-                                Presto!
-                            </li>
-                        </ol>
-                    </div>
-                    <div className="h-full w-1/4 border border-white">
-                        <img className="h-full mx-auto" src="/phone-settings-import-black-bg.png" alt="import button" />
-                    </div>
+                {/* Bottom 3/4 */}
+                <div className="h-5/6 w-full flex">
+                    {block}
                 </div>
             </div>
         </div>

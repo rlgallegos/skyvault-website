@@ -1,25 +1,25 @@
 export const questions = [
     {
-        "question": "Why did the chicken cross the road?",
-        "answer": "To get to the other side."
+        "question": "Can I try it out?",
+        "answer": "Absolutely. The first 30 days are completely free. After that, you'll be prompted to subscribe at $6.99/month. No surprise subscription costs on your card."
     },
     {
-        "question": "Who's afraid of Virginia Wolf?",
-        "answer": "Men."
+        "question": "What is Skyvault?",
+        "answer": "Skyvault is an inventory app for small businesses and resellers. It tracks inventory, sales, profits, and more."
     },
     {
-        "question": "How much wood would a woodchuck chuck?",
-        "answer": "A woodchuck would chuck all the would he could if a woodchuck could chuck wood."
+        "question": "How do you use my information?",
+        "answer": "In short, we don't. Your financial information is your own. We never trade, sell, or report any of your information."
     }
 ]
 export const largeQuestions = [
     {
-        "question": "Who are we?",
-        "answer": "I would for all the world become a man of leisure. I would become a raven that flies so high that you can no longer see the sun. I would blot out the ball of fire and condemn the earth to shadow with the depths of joy I feel welling from within me."
+        "question": "How long will it take to set up?",
+        "answer": "An excel sheet can be imported in seconds. Just download the template (***) and copy-paste the info in. If you don't have an inventory sheet, the app is still designed to make adding items quick."
     },
     {
-        "question": "What do we do?",
-        "answer": "I would for all the world become a man of leisure. I would become a raven that flies so high that you can no longer see the sun. I would blot out the ball of fire and condemn the earth to shadow with the depths of joy I feel welling from within me."
+        "question": "Who is Skyvault for?",
+        "answer": "In short, resellers and small business owners. Skyvaul was made by small business owners, for small business owners. You are busy. Skyvault aims to simplify arguably one of the more frustrating aspects: inventory. Do I have that in stock? How much did it cost? How much should I sell it for? Answers to these should be on-the-go, like you."
     }
 ]
 
