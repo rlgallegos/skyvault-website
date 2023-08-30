@@ -19,6 +19,7 @@ function Help(){
         window.open(templateLocation, '_blank')
     }
 
+
     // Tutorial Blocks set by state
 
     const refundBlock = (
