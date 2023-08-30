@@ -27,34 +27,34 @@ function Privacy(){
 
 
     const privacy_policy_block = (
-        <div className="w-4/5 h-5/6 px-8 flex flex-col">
+        <div className="w-full md:w-4/5 h-5/6 px-2 md:px-8 flex flex-col">
         <h1 className="lora text-white text-2xl my-4">Privacy Policy / Terms of Use</h1>
         <div className="w-full h-5/6 flex text-white overflow-y-scroll items-center justify-center">
-            <div className="" dangerouslySetInnerHTML={{ __html: privacyPolicyHtml }} />
+            <div className="text-white lora" dangerouslySetInnerHTML={{ __html: privacyPolicyHtml }} />
         </div>
     </div>
     )
     const disclaimer_block = (
-        <div className="w-1/2 h-5/6 px-8 flex flex-col ">
+        <div className="w-full md:w-1/2 h-5/6 px-2 md:px-8 flex flex-col ">
         <h1 className="lora text-white text-2xl">Disclaimer</h1>
         <div className="w-full h-1/2 flex items-center justify-center">
-            <p className="text-white text-justify indent-5">{disclaimer}</p>
+            <p className="text-white lora text-justify indent-5">{disclaimer}</p>
         </div>
     </div>
     )
   
     return (
-        <div id="privacy" className="block bg-black pt-[10vh] flex-col-reverse">
+        <div id="privacy" className="page-block bg-black pt-[10vh] flex-col-reverse">
                 {block}
-                <div className="w-1/2 h-1/6">
+                <div className="w-full md:w-1/2 h-1/6 flex mx-auto px-2 justify-center">
                     <button id="disclaimer" onClick={handleClick} 
-                    className="lora text-white w-1/3 h-1/2 rounded-l-full border border-white hover:bg-white hover:text-black
+                    className="lora text-white w-1/2 md:w-1/3 h-1/2 py-6 inline-flex items-center justify-center rounded-l-full border border-white hover:bg-white hover:text-black
                     hover:transform hover:scale-105 transition-all duration-200">
                         Disclaimer</button>
                     <button id="pp-button" onClick={handleClick} 
-                    className="lora text-white w-1/3 h-1/2 rounded-r-full border border-white hover:bg-white hover:text-black
+                    className="lora text-white w-1/2 md:w-1/3 h-1/2 py-6 inline-flex items-center justify-center rounded-r-full border border-white hover:bg-white hover:text-black
                     hover:transform hover:scale-105 transition-all duration-200">
-                        Privacy Policy / Terms of Use</button>
+                        Privacy Policy /<br/> Terms of Use</button>
                 </div>
                 {!block && <h1 className="lora text-white text-xl mb-12">The Fine Print.</h1>}
         </div>

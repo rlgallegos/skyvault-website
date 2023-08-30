@@ -7,7 +7,7 @@ function QACard({question, answer, small}){
             <div className={`w-full h-1/4 flex items-center text-left pt-4 px-4`}>
                 <h3 className="text-white font-bold">{question}</h3>
             </div>
-            <div className={`w-full h-1/4 flex items-center justify-end text-right p-4 mt-8`}>
+            <div className={`w-full h-1/4 flex items-center justify-end text-justify p-4 mt-8 px-6 pl-8`}>
                 <p className="text-white">{answer}</p>
             </div>
         </div>

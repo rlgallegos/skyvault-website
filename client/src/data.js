@@ -25,6 +25,14 @@ export const largeQuestions = [
 
 export const disclaimer = "Skyvault's purpose is to help you keep track of inventory, costs, sales, profits, and fees. We aim to be a tool to help you keep track of all the inventory-related tax information. As always, your taxes are your responsiblity. By using Skyvault, the user (you) are releasing releasing Skyvault LLC from any liablity, claims, or costs, present or future, that result from use of the information provided."
 
+export const galleryPaths = [
+    '/phone-inventory-black-bg.png',
+    '/phone-add-item-black-bg.png',
+    '/phone-sold-black-bg.png',
+    '/phone-details-black-bg.png',
+    '/phone-profit-black-bg.png'
+]
+
 export const navItems = [
     {
         id: 1,

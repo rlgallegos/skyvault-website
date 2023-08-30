@@ -2,7 +2,7 @@
 
 function Gallery2(){
     return (
-        <div id="gallery" className="block bg-blue-100">
+        <div id="gallery" className="hidden md:flex md:page-block">
             <div className="w-full h-full flex">
                 <div className="w-full h-full bg-black justify-left flex">
                     <div className="w-full">
