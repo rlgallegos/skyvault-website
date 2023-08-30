@@ -28,7 +28,7 @@ function QACardMobile({question, answer, difference, setLocation, index, selecte
 
     return (
         <div style={{ top: `${distance}px`}} onClick={handleClick}
-        className={`point absolute border border-gray-700 bg-[#030B14] px-1 w-full min-h-[150px] ${bringForward && 'border-tertiary z-40'} `}>
+        className={`point absolute border border-gray-700 bg-[#030B14] px-1 w-full min-h-[150px] translate-all duration-500 ${bringForward && 'border-tertiary z-40'} `}>
 
             <div className={`w-full h-1/6 flex items-center text-left pt-4 px-4 relative`}>
                 <IoMdClose className={`text-white absolute top-5 right-5 ${!bringForward && 'hidden'}`} />
