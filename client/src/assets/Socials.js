@@ -10,7 +10,7 @@ function Socials(){
                 </a>
             </div>
             <div className="h-1/3 w-full">
-                <a href="https://skyvaultinventory.com/" className="point h-full w-full">
+                <a href="https://www.facebook.com/skyvaultinventory/" className="point h-full w-full">
                     <SlSocialFacebook className="text-white h-full w-full
                     hover:transform hover:scale-110 transition-all duration-200" />          
                 </a>
