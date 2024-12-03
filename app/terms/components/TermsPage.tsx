@@ -68,6 +68,7 @@ const TermsPage: React.FC = () => {
                 </div>
             </div>
 
+
             {/* Switchable Block */}
             <div className="w-full h-3/4 flex flex-col items-center justify-center">
                 {wing}
