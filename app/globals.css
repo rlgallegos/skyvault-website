@@ -5,17 +5,58 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --skyBlue: #2779CF
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
   }
 }
 
+/* Tailwind-form custom classes */
+@layer base {
+    .title {
+        @apply font-lora text-white text-6xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]
+    }
+  }
+@layer base {
+    .subtitle {
+        @apply font-lora text-white text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,1)]
+    }
+  }
+@layer base {
+    .subtitle2 {
+        @apply font-lora text-2xl underline
+    }
+  }
+@layer base {
+    .button {
+        @apply font-lora w-[300px] py-4 rounded-[26px] border border-skyBlue bg-white drop-shadow-md 
+        hover:border-white hover:transform hover:scale-105 hover:bg-skyBlue hover:text-white
+        transition-all duration-200
+    }
+  }
+
 body {
-  color: var(--foreground);
+  color: var(--skyBlue);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+  }
+li {
+    list-style-type: none;
+}
+
+.qa-mobile-card {
+    background-image: linear-gradient(to bottom right, #2779CFEF 0%, #2779CF 33%, #2779CF 50%, #2779CF 75%, #fff 100%);
 }
