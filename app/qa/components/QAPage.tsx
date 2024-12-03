@@ -31,13 +31,11 @@ const QAPage:React.FC = () => {
         }
     }
 
-    let uniqueID3 = 300
     let difference = -60
     const mobileCards = completeQuestionList.map((question, i) => {
-        uniqueID3++
         difference += 60
         return <QACardMobile key={i + 1} question={question.question} answer={question.answer} difference={difference} 
-        index={i + 1} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} onSelectIndex={() => {handleSelectIndex(i + 1)}} />
+        index={i + 1} selectedIndex={selectedIndex} onSelectIndex={() => {handleSelectIndex(i + 1)}} />
     })
     return (
         <div id="qa" className="flex-col h-screen pt-6" >

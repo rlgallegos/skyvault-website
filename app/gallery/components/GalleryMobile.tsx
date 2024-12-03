@@ -9,7 +9,7 @@ import { galleryPaths } from "@/app/data";
 
 const GalleryMobile: React.FC = () => {
 
-    const carouselRef: any = useRef(null)
+    const carouselRef = useRef<HTMLDivElement>(null);
     let uniqueID = 500
     const images = galleryPaths.map((path, index)=> {
         uniqueID++

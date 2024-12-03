@@ -9,26 +9,14 @@ interface Props {
     difference: number
     index: number
     selectedIndex: number
-    setSelectedIndex: Dispatch<SetStateAction<number>>
     onSelectIndex: () => void
 }
 
 
-const QACardMobile: React.FC<Props> = ({question, answer, difference, index, selectedIndex, setSelectedIndex, onSelectIndex }) => {
+const QACardMobile: React.FC<Props> = ({question, answer, difference, index, selectedIndex, onSelectIndex }) => {
     const [bringForward, setBringForward] = useState(false)
     const [distance, setDistance] = useState(difference)
 
-    // function handleClick(){
-
-    //     setBringForward(() => !bringForward)
-
-    //     if (!bringForward){
-    //         setSelectedIndex(() => index)
-    //     } else {
-    //         setSelectedIndex(() => 0)
-    //     }
-
-    // }
     useEffect(() => {
             setDistance(() => {
                 if (index === selectedIndex){

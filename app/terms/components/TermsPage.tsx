@@ -17,7 +17,7 @@ const TermsPage: React.FC = () => {
         .then(htmlContent => setPrivacyPolicyHtml(htmlContent))
     }, [])
 
-    function handleClick(currBlockName: any){
+    function handleClick(currBlockName: string){
         if (currBlockName === blockName){
             setBlockName('wing')
         } else {
