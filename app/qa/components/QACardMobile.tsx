@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState, Dispatch, SetStateAction } from "react"
+import { useEffect, useState } from "react"
 import { IoMdClose } from "react-icons/io";
 
 
